@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="columns small-12 medium-6 large-4 posts" *ngFor="let post of posts">
+    <div class="post-container">
+      <div class="row">
+        <div class="columns small-12 large-10">
+          <a class="post-title" routerLink="/details/{{ post._id }}">
+            {{ post.title }}
+          </a>
+        </div>
+        <div class="columns small-12 large-2 show-for-large">
+          <a class="external" href="#" target="_blank">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 182.7 183" style="enable-background:new 0 0 182.7 183;" xml:space="preserve">
+              <g id="group">
+                <circle class="circle" cx="91.2" cy="91.5" r="91.5"/>
+                <polygon class="arrow" points="120.2,37.3 89.6,37.3 64.5,62.5 102.4,62.5 35.9,129 52.6,129 71.5,129 120.2,80.3 120.2,118.2
+                  145.4,93 145.4,62.5 145.4,37.3 "/>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p>
+        {{ post.description | length: 130 }}
+      </p>
+      <a class="cta-btn btn2" routerLink="/details/{{ post._id }}">More info</a>
+    </div>
+  </div>
+</div>
+

@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+$bg: #2a3136;
+$text: #88949D;
+$accent-color: #00E4AC;
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background: $bg;
+  color: $text;
+  font-family: 'Raleway';
+}
+
+a {
+  color: #fff;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.cta-btn {
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  border-radius: 5px;
+  padding: 5px 12px;
+  float: right;
+  &:hover {
+    background: $accent-color;
+    color: $bg;
+  }
+}
+
+h1 {
+  font-family: 'Raleway';
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4.2em;
+  line-height: 1.2em;
+}
+
+.circle {
+  fill: $accent-color;
+}
+
+.arrow {
+  fill: $bg;
+}
+
+#group {
+  cursor: pointer;
+  &:hover .circle {
+    -webkit-animation: animationCircle .5s forwards;
+    animation: animationCircle .5s forwards;
+  }
+  &:hover .arrow {
+    fill: $accent-color;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes animationCircle {
+  0% {
+    fill: $accent-color;
+  }
+  100% {
+    fill: $bg;
+  }
+}
